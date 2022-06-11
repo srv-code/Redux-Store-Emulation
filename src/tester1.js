@@ -3,7 +3,7 @@ const { orderReducer } = require('./client/reducers');
 const { initDebug } = require('./utils/debug');
 const { addBug, removeBug } = require('./client/actions');
 
-initDebug(true);
+// initDebug(true);
 
 const test1 = () => {
   const orderStore = createStore(orderReducer, 'orders');
@@ -31,7 +31,7 @@ const test1 = () => {
 
   orderStore.dispatch(removeBug(2));
 
-  console.log('store state, after deleting 2:', orderStore.getState());
+  console.log('store state, after deleting bug #2:', orderStore.getState());
 
   console.log('Unsubscribing show users');
   unsubscribeShowUsers();
