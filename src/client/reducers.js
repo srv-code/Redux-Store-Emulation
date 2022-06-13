@@ -2,12 +2,12 @@ const { actionTypes } = require('./action-types');
 const { produce } = require('../utils/immer');
 const { logDebugInfo } = require('../utils/debug');
 
-const intialState = {
+const initialState = {
   users: [],
   bugs: [],
 };
 
-const orderReducer = (state = intialState, action) => {
+const orderReducer = (state = initialState, action) => {
   logDebugInfo('orderReducer', { state, action });
 
   switch (action.type) {

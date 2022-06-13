@@ -1,8 +1,8 @@
 const { actionTypes } = require('./action-types');
 
-const addBug = (id, desciption) => ({
+const addBug = (id, description) => ({
   type: actionTypes.ADD_BUG,
-  payload: { id, desciption },
+  payload: { id, description },
 });
 
 const removeBug = id => ({
@@ -19,7 +19,4 @@ const removeBug = id => ({
 
 // tester1();
 
-module.exports = {
-  addBug,
-  removeBug,
-};
+module.exports = { addBug, removeBug };
